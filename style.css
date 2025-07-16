@@ -1,0 +1,19 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.chess-board {
+  width: 400px;
+  margin: 20px auto;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+textarea {
+  margin-top: 20px;
+  width: 80%;
+}
