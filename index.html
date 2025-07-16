@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chess Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chessboard.js/1.0.0/chessboard.min.css"/>
+</head>
+<body>
+  <h1>Chess Game</h1>
+  <div id="board" class="chess-board"></div>
+
+  <div class="controls">
+    <select id="gameMode">
+      <option value="human">Human vs Human</option>
+      <option value="ai">Human vs AI</option>
+      <option value="ai-ai">AI vs AI</option>
+    </select>
+
+    <button onclick="startGame()">Start</button>
+    <button onclick="undoMove()">Undo</button>
+    <button onclick="exportPGN()">Export PGN</button>
+    <input type="file" id="pgnFile" accept=".pgn" onchange="importPGN(event)" />
+  </div>
+
+  <textarea id="pgnOutput" rows="10" cols="60" readonly></textarea>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/1.0.0/chess.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard.js/1.0.0/chessboard.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
